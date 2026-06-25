@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "XSS Input Shield",
+  "version": "1.0",
+  "description": "Scans input fields and textareas for potential XSS payloads.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
